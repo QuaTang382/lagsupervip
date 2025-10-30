@@ -435,6 +435,31 @@ async def TcPChaT(ip, port, AutHToKen, key, iv, LoGinDaTaUncRypTinG, ready_event
                                 P = await SEndMsG(response.Data.chat_type, message, uid, chat_id, key, iv)
                                 await SEndPacKeT(whisper_writer, online_writer, 'ChaT', P)
 
+                        # --- LỆNH /stop ---
+                        if inPuTMsG.strip().startswith('/stop'):
+                            try:
+                                os.system('pkill -f bgmi')
+                                message = f"[B][C]{get_random_color()}🛑 BGMI process stopped successfully!"
+                            except Exception as e:
+                                message = f"[B][C]{get_random_color()}⚠ Error stopping BGMI: {e}"
+                            P = await SEndMsG(response.Data.chat_type, message, uid, chat_id, key, iv)
+                            await SEndPacKeT(whisper_writer, online_writer, 'ChaT', P)
+
+                        if inPuTMsG in ("hi" , "hello" , "fen" , "jexar"):
+                            uid = response.Data.uid
+                            chat_id = response.Data.Chat_ID
+                            message = 'Hello Im Dev BesTo\nTelegram : @operex77'
+                            P = await SEndMsG(response.Data.chat_type , message , uid , chat_id , key , iv)
+                            await SEndPacKeT(whisper_writer , online_writer , 'ChaT' , P)
+                        response = None
+                            
+            whisper_writer.close() ; await whisper_writer.wait_closed() ; whisper_writer = None
+                    
+                    	
+                    	
+        except Exception as e: print(f"ErroR {ip}:{port} - {e}") ; whisper_writer = None
+        await asyncio.sleep(reconnect_delay)
+
 
                         if inPuTMsG in ("hi" , "hello" , "fen" , "jexar"):
                             uid = response.Data.uid

@@ -35,7 +35,7 @@ Hr = {
     'Expect': "100-continue",
     'X-Unity-Version': "2018.4.11f1",
     'X-GA': "v1 1",
-    'ReleaseVersion': "OB50"}
+    'ReleaseVersion': "OB51"}
 
 # ---- Random Colores ----
 def get_random_color():
@@ -88,7 +88,7 @@ async def EncRypTMajoRLoGin(open_id, access_token):
     major_login.event_time = str(datetime.now())[:-7]
     major_login.game_name = "free fire"
     major_login.platform_id = 1
-    major_login.client_version = "1.114.1"
+    major_login.client_version = "1.118.4"
     major_login.system_software = "Android OS 9 / API-28 (PQ3B.190801.10101846/G9650ZHU2ARC6)"
     major_login.system_hardware = "Handheld"
     major_login.telecom_operator = "Verizon"
@@ -477,7 +477,7 @@ async def TcPChaT(ip, port, AutHToKen, key, iv, LoGinDaTaUncRypTinG, ready_event
         await asyncio.sleep(reconnect_delay)
 
 async def MaiiiinE():
-    Uid , Pw = '4252130496','880349F47F66AC2F36456B247C01D1F1A56EED7F0E97021D3B785881083DD1A8'
+    Uid , Pw = '4252415079','5D0CC85554608E98B149609A9FAB2677970D6C2706C38889B0F98617D137FEA6'
     
 
     open_id , access_token = await GeNeRaTeAccEss(Uid , Pw)
